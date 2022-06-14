@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 12 00px;  
+        }
+        .w{
+            transform-style: preserve-3d;  
+            margin: 600px auto;        
+            position: relative;
+            width: 600px;
+            height: 400px;
+             transform: rotateY(0,1,0,60deg); 
+        animation: move 10s linear infinite;
+        background: url(img/7.jpg) no-repeat;
+    }
+    .w:hover{
+        animation-play-state:paused;
+    }
+    @keyframes move{
+            0%{
+                transform:rotateY(0deg)
+            } 
+            100%{
+                transform:rotateY(360deg)
+            }
+        }
+        .w div{
+            
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+      
+        .w .no6{
+            /* transform:rotate3d(0,1,0,360deg); */
+            transform: translateZ(600px) ;
+            background: url( "img/6.jpg" ) no-repeat;
+        }
+        .w .no1{   
+              /* transform: translateX(600px); */       
+            transform:rotateY(60deg) translateZ(700px);
+            background: url( "img/1.jpg" ) no-repeat;
+            
+        }
+        .w .no2{
+           /*  transform: translateX(120px);
+            /* transform: translateZ(-600px); 
+          transform:rotate3d(120deg); */
+            background: url( "img/2.jpg" );
+            transform:rotateY(120deg) translateZ(700px);
+        }
+        .w .no3{
+          
+            /* transform: translateZ(-950px);
+              transform:rotateY(180deg); */
+            background: url( "img/3.jpg" );
+            transform:rotateY(180deg) translateZ(700px);
+            
+        }
+        .w .no4{
+            /* transform: translateZ(-600px);
+             transform:rotateY(240deg); */
+            background: url( "img/4.jpg" );
+            transform:rotateY(240deg) translateZ(700px);
+            
+        }
+        .w .no5{
+            
+          /*   transform: translateZ(-350px);
+            transform: translateX(-600px);
+            transform:rotateY(300deg); */
+            background: url( "img/5.jpg" );
+            transform:rotateY(300deg) translateZ(700px);
+        }
+       
+    </style> 
+</head>
+<body>
+    <div class="w">
+        <div class='no6'></div>
+        <div class='no1'></div> 
+           <div class='no2'></div> 
+        <div class='no3'></div>
+       
+        <div class='no4'></div>
+        <div class='no5'></div> 
+        
+    </div>
+</body>
+</html>
